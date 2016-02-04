@@ -12,6 +12,8 @@
 		ECEF85751C63E40C006FE74C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEF85731C63E40C006FE74C /* Main.storyboard */; };
 		ECEF85771C63E40C006FE74C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEF85761C63E40C006FE74C /* Assets.xcassets */; };
 		ECEF857A1C63E40C006FE74C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEF85781C63E40C006FE74C /* LaunchScreen.storyboard */; };
+		ECEF85841C6405F6006FE74C /* KGSecondChancesSketch.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECEF85821C6405F6006FE74C /* KGSecondChancesSketch.ttf */; };
+		ECEF85851C6405F6006FE74C /* KGSecondChancesSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECEF85831C6405F6006FE74C /* KGSecondChancesSolid.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		ECEF85761C63E40C006FE74C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEF85791C63E40C006FE74C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEF857B1C63E40C006FE74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEF85821C6405F6006FE74C /* KGSecondChancesSketch.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGSecondChancesSketch.ttf; sourceTree = "<group>"; };
+		ECEF85831C6405F6006FE74C /* KGSecondChancesSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGSecondChancesSolid.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		ECEF856E1C63E40C006FE74C /* Multiples */ = {
 			isa = PBXGroup;
 			children = (
+				ECEF85811C640554006FE74C /* font */,
 				ECEF856F1C63E40C006FE74C /* AppDelegate.swift */,
 				ECEF85711C63E40C006FE74C /* ViewController.swift */,
 				ECEF85731C63E40C006FE74C /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				ECEF857B1C63E40C006FE74C /* Info.plist */,
 			);
 			path = Multiples;
+			sourceTree = "<group>";
+		};
+		ECEF85811C640554006FE74C /* font */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF85821C6405F6006FE74C /* KGSecondChancesSketch.ttf */,
+				ECEF85831C6405F6006FE74C /* KGSecondChancesSolid.ttf */,
+			);
+			name = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +137,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECEF857A1C63E40C006FE74C /* LaunchScreen.storyboard in Resources */,
+				ECEF85851C6405F6006FE74C /* KGSecondChancesSolid.ttf in Resources */,
 				ECEF85771C63E40C006FE74C /* Assets.xcassets in Resources */,
+				ECEF85841C6405F6006FE74C /* KGSecondChancesSketch.ttf in Resources */,
 				ECEF85751C63E40C006FE74C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
