@@ -33,6 +33,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="f2T-pK-w4O">
                                 <rect key="frame" x="184" y="80" width="232" height="74"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-yQ-skl" userLabel="startBtn">
+                                <rect key="frame" x="232" y="452" width="136" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="Rnt-cq-yIe"/>
+                                    <constraint firstAttribute="width" constant="136" id="fAe-5k-uI7"/>
+                                </constraints>
+                                <state key="normal" image="Start"/>
+                                <connections>
+                                    <action selector="onStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKf-DN-qiH"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the table" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKb-gx-ds1" userLabel="tableTxt">
                                 <rect key="frame" x="184" y="278" width="232" height="45"/>
                                 <constraints>
@@ -55,6 +66,9 @@
                                         <exclude reference="IGL-GU-HsO"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="onCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="djk-ef-zfX"/>
+                                </connections>
                             </button>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EFg-Js-x50" userLabel="answerTxt">
                                 <rect key="frame" x="234" y="272" width="132" height="56"/>
@@ -83,26 +97,40 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcn-mA-Lge" userLabel="restartBtn">
+                                <rect key="frame" x="451" y="466" width="129" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="Fy6-6k-NXq"/>
+                                    <constraint firstAttribute="width" constant="136" id="NQP-Vz-jdA"/>
+                                </constraints>
+                                <state key="normal" image="Restart"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NQP-Vz-jdA"/>
+                                        <exclude reference="Fy6-6k-NXq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onRestart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4DO-Hv-KW7"/>
+                                </connections>
+                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F5-SV-ae3" userLabel="againBtn">
-                                <rect key="frame" x="232" y="452" width="136" height="106"/>
+                                <rect key="frame" x="20" y="452" width="136" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="22J-fB-gcP"/>
                                     <constraint firstAttribute="width" constant="136" id="MBE-pv-PnU"/>
                                 </constraints>
                                 <state key="normal" image="Again"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok6-yQ-skl" userLabel="startBtn">
-                                <rect key="frame" x="232" y="452" width="136" height="106"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="Rnt-cq-yIe"/>
-                                    <constraint firstAttribute="width" constant="136" id="fAe-5k-uI7"/>
-                                </constraints>
-                                <state key="normal" image="Start"/>
+                                <connections>
+                                    <action selector="onAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7OQ-ca-RII"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1F5-SV-ae3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="11y-Ai-9ZS"/>
                             <constraint firstItem="oLG-2d-fKP" firstAttribute="top" secondItem="f2T-pK-w4O" secondAttribute="bottom" constant="15" id="7Fj-yi-5yx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bcn-mA-Lge" secondAttribute="trailing" id="99b-rK-gRK"/>
                             <constraint firstItem="EFg-Js-x50" firstAttribute="top" secondItem="oLG-2d-fKP" secondAttribute="bottom" constant="22" id="B5T-Pp-ZTd"/>
                             <constraint firstItem="f2T-pK-w4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Coy-ua-E5P"/>
                             <constraint firstItem="pKb-gx-ds1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E88-cO-L2e"/>
@@ -114,6 +142,7 @@
                             <constraint firstItem="VuG-yx-F6S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QTw-Bg-UjT"/>
                             <constraint firstItem="VuG-yx-F6S" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Sbp-Dc-cXp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oee-Ad-DRP" secondAttribute="bottom" constant="42" id="WFv-25-zUy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bcn-mA-Lge" secondAttribute="bottom" constant="42" id="WhM-3T-q66"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1F5-SV-ae3" secondAttribute="bottom" constant="42" id="aFu-3x-W17"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ok6-yQ-skl" secondAttribute="bottom" constant="42" id="ctY-fm-Rvt"/>
                             <constraint firstItem="VuG-yx-F6S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="lKJ-0N-bNM"/>
@@ -133,9 +162,22 @@
                             <mask key="constraints">
                                 <exclude reference="KaW-qC-8d3"/>
                                 <exclude reference="zGX-Tw-zB7"/>
+                                <exclude reference="zqX-PC-1wU"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="againBtn" destination="1F5-SV-ae3" id="Zrr-td-2fi"/>
+                        <outlet property="answerLabel" destination="KCN-6R-zuz" id="YUb-KD-Tpi"/>
+                        <outlet property="answerText" destination="EFg-Js-x50" id="aCR-VL-ZZF"/>
+                        <outlet property="checkBtn" destination="Oee-Ad-DRP" id="XkQ-3I-kX5"/>
+                        <outlet property="equalsLabel" destination="oLG-2d-fKP" id="4Dt-hy-aYj"/>
+                        <outlet property="logo" destination="f2T-pK-w4O" id="kz2-qu-f0N"/>
+                        <outlet property="questionLabel" destination="VuG-yx-F6S" id="rLx-uq-4hG"/>
+                        <outlet property="restartBtn" destination="bcn-mA-Lge" id="oHK-em-l1r"/>
+                        <outlet property="startBtn" destination="ok6-yQ-skl" id="Ohc-ku-ogW"/>
+                        <outlet property="tableText" destination="pKb-gx-ds1" id="eCe-nz-fyf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,6 +189,7 @@
         <image name="BackToSchool-9" width="800" height="800"/>
         <image name="Blackboard" width="129" height="92"/>
         <image name="Logo" width="232" height="74"/>
+        <image name="Restart" width="129" height="92"/>
         <image name="Start" width="136" height="106"/>
     </resources>
 </document>
