@@ -68,26 +68,36 @@ class ViewController: UIViewController {
         return Int(arc4random_uniform(UInt32(10)))
     }
     
-    func generateQuestion(table: Int, var multiplier: Int){
+    func generateQuestion(){
+        multiplier = randomNumber()
         if(multiplier == 0){
             multiplier++
+            
         }
         questionLabel.text = "\(table) x \(multiplier)"
     }
     
-    func showGrade(text: String) {
+    func showGrade(answerType: Bool) {
         answerLabel.hidden = false
-        answerLabel.text = text
-        againBtn.hidden = false
-        restartBtn.hidden = false
-        checkBtn.hidden = true
+        if(answerType){
+            answerLabel.text = correctAnswer
+            againBtn.hidden = false
+            restartBtn.hidden = false
+            checkBtn.hidden = true
+        }
+        if(!answerType) {
+            answerLabel.text = wrongAnswer
+            againBtn.hidden = true
+            restartBtn.hidden = true
+            checkBtn.hidden = false
+        }
     }
     
     @IBAction func onStart(startBtn: UIButton!) {
         if(textVerify(tableText)) {
             start()
             table = Int(tableText.text!)!
-            generateQuestion(table, multiplier: randomNumber())
+            generateQuestion()
         }
     }
     
@@ -96,9 +106,9 @@ class ViewController: UIViewController {
         if(textVerify(answerText)){
             let answer: Int = Int(answerText.text!)!
             if(answer == (table * multiplier)){
-                showGrade(correctAnswer)
+                showGrade(true)
             } else {
-                showGrade(wrongAnswer)
+                showGrade(false)
             }
         }
     }
@@ -108,11 +118,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onAgain(againBtn: UIButton!) {
-        generateQuestion(table, multiplier: randomNumber())
         answerLabel.hidden = true
+        answerText.text = ""
         againBtn.hidden = true
         restartBtn.hidden = true
         checkBtn.hidden = false
+        generateQuestion()
         
     }
     

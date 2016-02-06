@@ -106,8 +106,8 @@
                                 <state key="normal" image="Restart"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="NQP-Vz-jdA"/>
                                         <exclude reference="Fy6-6k-NXq"/>
+                                        <exclude reference="NQP-Vz-jdA"/>
                                     </mask>
                                 </variation>
                                 <connections>
